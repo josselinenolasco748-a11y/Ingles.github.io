@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos de Inglés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .curso-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .curso {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .curso h2 {
+            color: #2980b9;
+        }
+        .curso p {
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #1f618d;
+        }
+        .detalles {
+            margin-top: 15px;
+            display: none;
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            color: #333;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cursos de Inglés</h1>
+
+    <div class="curso-container">
+        <!-- Curso 1 -->
+        <div class="curso">
+            <h2>Curso de Inglés Básico</h2>
+            <p>Ideal para principiantes. Aprende saludos y vocabulario cotidiano.</p>
+            <button class="btn" onclick="toggleDetalles(this)">Más información</button>
+            <div class="detalles">
+                <ul>
+                    <li>Alfabeto y pronunciación</li>
+                    <li>Saludos y presentaciones</li>
+                    <li>Vocabulario: colores, números, familia</li>
+                    <li>Gramática básica: verbo “to be”, presente simple</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Curso 2 -->
+        <div class="curso">
+            <h2>Curso de Inglés Intermedio</h2>
+            <p>Mejora tu comprensión, expresión oral y escritura en inglés.</p>
+            <button class="btn" onclick="toggleDetalles(this)">Más información</button>
+            <div class="detalles">
+                <ul>
+                    <li>Conversaciones cotidianas</li>
+                    <li>Gramática: pasado simple, pasado continuo, futuro</li>
+                    <li>Comprensión lectora de textos intermedios</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Curso 3 -->
+        <div class="curso">
+            <h2>Curso de Inglés Avanzado</h2>
+            <p>Perfecciona tu inglés con conversaciones complejas.</p>
+            <button class="btn" onclick="toggleDetalles(this)">Más información</button>
+            <div class="detalles">
+                <ul>
+                    <li>Inglés para presentaciones y debates</li>
+                    <li>Gramática avanzada: condicionales, voz pasiva, estilo indirecto</li>
+                    <li>Ensayos académicos y artículos</li>
+                    <li>Inglés para entrevistas de trabajo y reuniones</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetalles(button) {
+            const detalles = button.nextElementSibling;
+            const visible = detalles.style.display === "block";
+            detalles.style.display = visible ? "none" : "block";
+            button.textContent = visible ? "Más información" : "Menos información";
+        }
+    </script>
+    <a href="cliente.html" class="btn"><button type="button">Inscribirse</button></a>
+
+</body>
+</html>
